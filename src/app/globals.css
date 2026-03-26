@@ -1,26 +1,95 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Class-based dark mode for next-themes */
+@custom-variant dark (&:where(.dark, .dark *));
 
-@theme inline {
+/* Custom palette */
+@theme {
+  /* black (dusty mauve) */
+  --color-black-50: #f4f0f0;
+  --color-black-100: #e9e2e2;
+  --color-black-200: #d3c5c5;
+  --color-black-300: #bda8a8;
+  --color-black-400: #a78b8b;
+  --color-black-500: #916e6e;
+  --color-black-600: #745858;
+  --color-black-700: #574242;
+  --color-black-800: #3a2c2c;
+  --color-black-900: #1d1616;
+  --color-black-950: #140f0f;
+
+  /* dark-slate-grey */
+  --color-dsg-50: #f0f4f3;
+  --color-dsg-100: #e2e9e7;
+  --color-dsg-200: #c4d4cf;
+  --color-dsg-300: #a7beb7;
+  --color-dsg-400: #8aa89f;
+  --color-dsg-500: #6c9387;
+  --color-dsg-600: #57756c;
+  --color-dsg-700: #415851;
+  --color-dsg-800: #2b3b36;
+  --color-dsg-900: #161d1b;
+  --color-dsg-950: #0f1513;
+
+  /* grey */
+  --color-grey-50: #f1f3f3;
+  --color-grey-100: #e4e7e6;
+  --color-grey-200: #c8d0cd;
+  --color-grey-300: #adb8b5;
+  --color-grey-400: #92a09c;
+  --color-grey-500: #778883;
+  --color-grey-600: #5f6d69;
+  --color-grey-700: #47524f;
+  --color-grey-800: #2f3734;
+  --color-grey-900: #181b1a;
+  --color-grey-950: #111312;
+
+  /* muted-teal */
+  --color-teal-50: #f2f4f1;
+  --color-teal-100: #e4e9e2;
+  --color-teal-200: #cad2c6;
+  --color-teal-300: #afbca9;
+  --color-teal-400: #94a58d;
+  --color-teal-500: #798f70;
+  --color-teal-600: #61725a;
+  --color-teal-700: #495643;
+  --color-teal-800: #31392d;
+  --color-teal-900: #181d16;
+  --color-teal-950: #111410;
+
+  /* silver */
+  --color-silver-50: #f4f2f0;
+  --color-silver-100: #e9e5e2;
+  --color-silver-200: #d4cac4;
+  --color-silver-300: #beb0a7;
+  --color-silver-400: #a8958a;
+  --color-silver-500: #937b6c;
+  --color-silver-600: #756257;
+  --color-silver-700: #584a41;
+  --color-silver-800: #3b312b;
+  --color-silver-900: #1d1916;
+  --color-silver-950: #15110f;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Semantic tokens — light */
+:root {
+  --background: #f1f3f3;   /* grey-50 */
+  --foreground: #161d1b;   /* dsg-900 */
+}
+
+/* Semantic tokens — dark */
+.dark {
+  --background: #0f1513;   /* dsg-950 */
+  --foreground: #f0f4f3;   /* dsg-50 */
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
