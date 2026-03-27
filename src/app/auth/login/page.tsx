@@ -25,12 +25,12 @@ export default async function LoginPage({
         <ThemeToggle />
       </div>
       <div className="w-full max-w-sm rounded-2xl border border-grey-200 bg-white p-8 shadow-sm dark:border-dsg-800 dark:bg-dsg-900">
-        <h1 className="mb-2 text-2xl font-bold text-dsg-900 dark:text-dsg-50">
-          HP Prompt Chain
+        <h1 className="mb-2 text-center text-2xl font-bold text-dsg-900 dark:text-dsg-50">
+          Kristy's Prompt Chain Tool
         </h1>
-        <p className="mb-8 text-sm text-grey-500 dark:text-grey-400">
+        <p className="mb-8 text-center text-sm text-grey-500 dark:text-grey-400">
           Sign in with your Google account to continue. Access is restricted to
-          authorized users only.
+          super admins and matrix admins only.
         </p>
 
         {error && (
